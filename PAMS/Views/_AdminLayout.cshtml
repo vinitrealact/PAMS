@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <style type="text/css">
+        #nav ul{
+            display:none;
+            font-size:30px;
+        }
+
+        #nav li:hover{
+            display:block;
+        }
+        #nav li{
+            float:left;
+            display:block;
+            border-style:inset;
+            font-size:30px;
+        }
+
+        #nav li:hover ul{
+            display:block;
+            color:red;
+            height:auto;
+            width:auto;
+        }
+
+        #nav li ul li{
+            clear:both;
+            border-style:none;
+        }
+
+        #nav li ul{
+            color:red;
+            border-style:none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td>image</td>
+            </tr>
+            <tr>
+                <td>
+                    <ul id="nav">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Department</a>
+                            <ul>
+                                <li>
+                                    @Html.ActionLink("Add", "Create", "Department" )
+                                    @*<a href="Department/Create">Add</a>*@
+                                </li>
+                                <li>
+                                    <a href="#">Delete</a>
+                                </li>
+                                <li>
+                                    <a href="#">View</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" >Designation</a>
+                        </li>
+                        <li>
+                            <a href="#">Country</a>
+                        </li>
+                        <li>
+                            <a href="#" >State</a>
+                        </li>
+                        <li>
+                            <a href="#">City</a>
+                        </li>
+                        <li>
+                            <a href="#">Location</a>
+                        </li>
+                        <li>
+                            <a href="#">Developement Center</a>
+                        </li>
+                        <li>
+                            @Html.ActionLink("Technology", "Index", "Technology")
+                            @*<a href="#" >Technology</a>*@
+                        </li>
+                        <li>
+                            <a href="#" >Client</a>
+                        </li>
+                        <li>
+                            <a href="#">Project</a>
+                        </li>
+                        <li>
+                            <a href="#">Logout</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Copyright@2018</td>
+            </tr>
+        </table>
+        @RenderBody()
+    </div>
+</body>
+</html>
