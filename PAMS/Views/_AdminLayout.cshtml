@@ -60,7 +60,8 @@
                                     @*<a href="Department/Create">Add</a>*@
                                 </li>
                                 <li>
-                                    <a href="#">Delete</a>
+                                    @Html.ActionLink("Add", "Create", "Department")
+                                    @*<a href="#">Delete</a>*@
                                 </li>
                                 <li>
                                     <a href="#">View</a>
@@ -90,7 +91,7 @@
                             @*<a href="#" >Technology</a>*@
                         </li>
                         <li>
-                            <a href="#" >Client</a>
+                            @Html.ActionLink("Client", "Index", "Client")
                         </li>
                         <li>
                             <a href="#">Project</a>

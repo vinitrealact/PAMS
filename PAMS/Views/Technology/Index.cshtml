@@ -1,4 +1,4 @@
-﻿@model IEnumerable<PAMS.Models.Technology>
+﻿@model IEnumerable<PAMS.DAL.technology>
 
 @{
     ViewBag.Title = "Index";
@@ -13,10 +13,10 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.techid)
+            @Html.DisplayNameFor(model => model.id)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.technology)
+            @Html.DisplayNameFor(model => model.techname)
         </th>
         <th></th>
     </tr>
@@ -24,10 +24,10 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.techid)
+            @Html.DisplayFor(modelItem => item.id)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.technology)
+            @Html.DisplayFor(modelItem => item.techname)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.techid }) |

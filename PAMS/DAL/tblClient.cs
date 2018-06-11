@@ -12,10 +12,10 @@ namespace PAMS.DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class technology
+    public partial class tblClient
     {
         public int id { get; set; }
-        public string techid { get; set; }
-        public string techname { get; set; }
+        public string clientName { get; set; }
+        public string clientId { get; set; }
     }
 }
